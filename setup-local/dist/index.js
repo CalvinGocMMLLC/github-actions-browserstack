@@ -1111,7 +1111,7 @@ class BinaryControl {
    */
   _decidePlatformAndBinary() {
     this.binaryFolder = path.resolve(
-      process.env.RUNNER_TEMP,
+      process.env.RUNNER_TOOL_CACHE,
       '..', '..', '..',
       '_work',
       'binary',
@@ -8019,9 +8019,9 @@ function getWorkFlowRunId() {
 }
 exports.getWorkFlowRunId = getWorkFlowRunId;
 function getWorkSpaceDirectory() {
-    const workspaceDirectory = process.env['RUNNER_TEMP'];
+    const workspaceDirectory = process.env['RUNNER_TOOL_CACHE'];
     if (!workspaceDirectory) {
-        throw new Error('Unable to get RUNNER_TEMP env variable');
+        throw new Error('Unable to get RUNNER_TOOL_CACHE env variable');
     }
     return workspaceDirectory;
 }
