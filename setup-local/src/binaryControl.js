@@ -46,7 +46,7 @@ class BinaryControl {
    */
   _decidePlatformAndBinary() {
     this.binaryFolder = path.resolve(
-      process.env.RUNNER_TEMP,
+      process.env.RUNNER_TOOL_CACHE,
       '..', '..', '..',
       '_work',
       'binary',
